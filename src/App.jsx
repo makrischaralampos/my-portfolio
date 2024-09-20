@@ -4,9 +4,9 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-black dark:text-white">
       <NavBar />
-      {/* Pages will go here */}
+      {/* Content goes here */}
       <Footer />
     </div>
   );

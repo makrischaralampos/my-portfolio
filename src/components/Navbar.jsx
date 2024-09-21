@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const NavBar = () => {
@@ -9,15 +10,15 @@ const NavBar = () => {
         My Portfolio
       </h1>
       <div className="space-x-4">
-        <a href="#about" className="text-gray-800 dark:text-gray-300">
+        <Link to="/" className="text-gray-800 dark:text-gray-300">
           About
-        </a>
-        <a href="#projects" className="text-gray-800 dark:text-gray-300">
+        </Link>
+        <Link to="/projects" className="text-gray-800 dark:text-gray-300">
           Projects
-        </a>
-        <a href="#contact" className="text-gray-800 dark:text-gray-300">
+        </Link>
+        <Link to="/contact" className="text-gray-800 dark:text-gray-300">
           Contact
-        </a>
+        </Link>
         <ThemeToggle />
       </div>
     </nav>

@@ -43,6 +43,7 @@ const Projects = () => {
               {project.video ? (
                 <video
                   controls
+                  loading="lazy" // Lazy load videos as well
                   className="w-full h-48 object-cover rounded mb-4"
                 >
                   <source src={project.video} type="video/mp4" />
@@ -51,7 +52,8 @@ const Projects = () => {
               ) : (
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} screenshot`}
+                  loading="lazy" // Add lazy loading to images
                   className="w-full h-48 object-cover rounded mb-4"
                 />
               )}

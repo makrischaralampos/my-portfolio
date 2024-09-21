@@ -10,13 +10,22 @@ const NavBar = () => {
         My Portfolio
       </h1>
       <div className="space-x-4">
-        <Link to="/" className="text-gray-800 dark:text-gray-300">
+        <Link
+          to="/"
+          className="text-gray-800 dark:text-gray-300 hover:text-blue-500"
+        >
           About
         </Link>
-        <Link to="/projects" className="text-gray-800 dark:text-gray-300">
+        <Link
+          to="/projects"
+          className="text-gray-800 dark:text-gray-300 hover:text-blue-500"
+        >
           Projects
         </Link>
-        <Link to="/contact" className="text-gray-800 dark:text-gray-300">
+        <Link
+          to="/contact"
+          className="text-gray-800 dark:text-gray-300 hover:text-blue-500"
+        >
           Contact
         </Link>
         <ThemeToggle />

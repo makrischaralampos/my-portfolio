@@ -1,10 +1,28 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import projects from "../projectData";
 
 const Projects = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
-    <section
+    <motion.section
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+      }}
       id="projects"
       className="p-8 md:p-16 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
     >
@@ -12,9 +30,11 @@ const Projects = () => {
         <h2 className="text-4xl font-bold mb-6 text-center">Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className="p-4 bg-gray-200 dark:bg-gray-700 rounded shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:scale-105"
+              whileHover={{ scale: 1.05 }} // Scale the card on hover
+              whileTap={{ scale: 0.95 }} // Scale down slightly on click
+              className="p-4 bg-gray-200 dark:bg-gray-700 rounded shadow-md hover:shadow-lg transition-shadow duration-300"
             >
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
               <p className="text-lg mb-4">{project.description}</p>
@@ -45,11 +65,11 @@ const Projects = () => {
               >
                 View on GitHub
               </a>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className="w-full p-4 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
       <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-        My Portfolio
+        Charalampos Makris
       </h1>
 
       {/* Full Navbar for larger screens */}

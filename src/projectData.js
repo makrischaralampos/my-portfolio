@@ -1,19 +1,21 @@
 const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "A description of Project One.",
-    image: "/images/project-one.jpg",
+    title: "Jammming",
+    description:
+      "Jammming is a web application that allows users to search for songs on Spotify, create custom playlists, and save those playlists directly to their Spotify account.",
+    image: "/src/images/Jammming.png",
     video: null, // Set a video link here if available
-    githubLink: "https://github.com/username/project-one",
+    githubLink: "https://github.com/makrischaralampos/jammming",
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "A description of Project Two.",
-    image: null,
-    video: "/videos/project-two.mp4", // Example video link
-    githubLink: "https://github.com/username/project-two",
+    title: "Inspirational Homepage",
+    description:
+      "Inspirational Homepage is a React-based web application designed to uplift your day by combining beautiful imagery, motivational quotes, weather updates, and goal tracking all on one personalized homepage.",
+    image: "/src/images/inspirational-homepage.png",
+    video: null, // Example video link
+    githubLink: "https://github.com/makrischaralampos/inspirational-homepage",
   },
   // Add more projects as needed
 ];

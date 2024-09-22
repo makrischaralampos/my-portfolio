@@ -28,14 +28,16 @@ const AboutMe = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl font-bold mb-6 text-center">About Me</h2>
         <p className="text-lg mb-4 text-justify">
-          I am a passionate software engineer specializing in frontend
-          development. I enjoy creating fast, responsive, and visually appealing
-          web applications.
+          Highly motivated and technically proficient with a Master of
+          Engineering degree in Electrical and Computer Engineering from the
+          University of Thessaly. Strong foundation in software development,
+          problem-solving, and project management with a specialization in
+          software engineering and information systems.
         </p>
         <p className="text-lg text-justify">
-          Skilled in React, Tailwind CSS, and modern web technologies. I love
-          learning new things and constantly improving my skill set to build
-          better user experiences.
+          Skilled in PyTorch, Spring Boot, Node.js, React.js, Spark and modern
+          web technologies. I love learning new things and constantly improving
+          my skill set to build better user experiences.
         </p>
       </div>
     </motion.section>
